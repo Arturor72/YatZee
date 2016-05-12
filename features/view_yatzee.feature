@@ -8,7 +8,8 @@ Scenario: Inicio portada
 Scenario: Lanzar dado
 	Given Voy a jugar
 	When hago click en el boton "lanzar"
-#	Then visualizo numero "1" 
-#	And visualizo el total de puntos "1"
+#	Then visualizo numero "3"
+#	And visualizo numero "5"
+#	And visualizo el total de puntos "8"
 
 

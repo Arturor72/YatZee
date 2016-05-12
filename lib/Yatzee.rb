@@ -3,16 +3,20 @@ require_relative "../lib/Dado.rb"
 class Yatzee
 
 	def initialize
-		@dado=Dado.new
+		@dados=[Dado.new,Dado.new,Dado.new,Dado.new,Dado.new]
 		@total=0
 	end
 
-	def total
-		@total=@dado.valor
+	def total 
+		@total
 	end
 
-	def get_dado
-		@dado
+	def sumar_resultados_dados
+		@dados.each {|dado|	@total+=dado.valor}
+	end
+
+	def get_dado index
+		@dados[index]
 	end
 
 end
