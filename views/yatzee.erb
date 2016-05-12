@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<link href="css/yatzee.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<h1>YatZee</h1>
+		<div id="lanzar">
+			<form method="POST" action="/lanzarDado">
+			<input type="submit" value="lanzar">
+			</form>
+		</div>
+		<div id="dados">
+			<p>Dado: <%= @resultado%><p>
+			<input type="checkbox" name="relanzar" value="relanzar">
+		</div>
+		<div id="total">
+			<p>Total Puntos: <%= @resultado%><p>
+		</div>	
+
+	<body>
+</html>
