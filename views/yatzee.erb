@@ -9,17 +9,43 @@
 			<form method="POST" action="/lanzarDado">
 			<input type="submit" value="lanzar">
 			</form>
+			<form method="POST" action="/relanzarDado">
+			<input type="submit" value="relanzar">
+			</form>
 		</div>
 		<div id="dados">
-			<div>			
-				Dado 1: <%= @resultado%>
-				<input type="checkbox" name="relanzar" value="relanzar">
-			</div>
-			<div>			
-				Dado 2: <%= @resultado2%>
-				<input type="checkbox" name="relanzar" value="relanzar">
-			</div>
-		</div>
+		<table id="tablaDados">
+			<tr colspan="5" align="center"> Dados </tr>
+			<tr>
+				<td> 			
+					<div> <%= @resultado%>
+						<input type="checkbox" name="relanzar" value="relanzar">
+					</div>
+				</td>
+				<td> 			
+					<div> <%= @resultado%>
+						<input type="checkbox" name="relanzar" value="relanzar">
+					</div>
+				</td>
+				<td> 			
+					<div> <%= @resultado%>
+						<input type="checkbox" name="relanzar" value="relanzar">
+					</div>
+				</td>
+				<td> 			
+					<div> <%= @resultado%>
+						<input type="checkbox" name="relanzar" value="relanzar">
+					</div>
+				</td>
+				<td> 			
+					<div> <%= @resultado%>
+						<input type="checkbox" name="relanzar" value="relanzar">
+					</div>
+				</td>
+
+			</tr>
+		</table>
+		
 		<div id="total">
 			<p>Total Puntos: <%= @resultado%><p>
 		</div>	
