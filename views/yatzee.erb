@@ -3,15 +3,22 @@
 		<link href="css/yatzee.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<h1>YatZee</h1>
-		<div id="lanzar">
+		<h1 id="titulo">YatZee</h1>
+		
+	<div id="lanzar">
 			<form method="POST" action="/lanzarDado">
 			<input type="submit" value="lanzar">
 			</form>
 		</div>
 		<div id="dados">
-			<p>Dado: <%= @resultado%><p>
-			<input type="checkbox" name="relanzar" value="relanzar">
+			<div>			
+				Dado 1: <%= @resultado%>
+				<input type="checkbox" name="relanzar" value="relanzar">
+			</div>
+			<div>			
+				Dado 2: <%= @resultado2%>
+				<input type="checkbox" name="relanzar" value="relanzar">
+			</div>
 		</div>
 		<div id="total">
 			<p>Total Puntos: <%= @resultado%><p>

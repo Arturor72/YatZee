@@ -1,0 +1,18 @@
+body{
+/*text-align: center;*/
+}
+h1{
+/*text-align: center;*/
+}
+#lanzar{
+float: left;
+margin-right: 150px;
+text-align: right;
+}
+#dados{
+/*background-color:green;*/
+
+}
+#total{
+/*background-color:yellow;*/
+}
