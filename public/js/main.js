@@ -1,7 +1,7 @@
-var cont=0;
 $(document).ready(function(){
-	$("#relanzar").click(function(){
-		cont++;
-
-	});
+	var cont=$("#lanzamiento").val();
+	if(cont==3){
+		$("#relanzar").prop('disabled', true);
+	}
+	
 });
