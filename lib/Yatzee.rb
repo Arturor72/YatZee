@@ -36,7 +36,7 @@ class Yatzee
 	def mensaje_final
 		if @total>=20
 			return @mensaje= "Ganaste"
-		elsif @total=0
+		elsif @total==0
 			return @mensaje
 		else
 			return @mensaje="Game over"
