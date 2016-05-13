@@ -18,6 +18,15 @@ Scenario: Relanzar dado
 	And selecciono "d3_selected"
 	And hago click en el boton "relanzar"
 	#Then visualizo numero "6"
-	
 
+
+Scenario: Veo mi puntaje
+	Given Voy a jugar
+	When hago click en el boton "lanzar"
+	Then visualizo en la tabla la fila "Puntaje"
+	
+Scenario: Veo Resultado
+	Given Voy a jugar
+	When hago click en el boton "lanzar"
+	Then visualizo "Resultado"
 

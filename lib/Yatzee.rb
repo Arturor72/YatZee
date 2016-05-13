@@ -12,6 +12,7 @@ class Yatzee
 	end
 
 	def sumar_resultados_dados
+		@total=0
 		@dados.each {|dado|	@total+=dado.valor}
 	end
 
@@ -30,5 +31,12 @@ class Yatzee
 			arreglo_dados.each_with_index {|dado,index| dado.lanzar(vals[index])}
 		end
 	end
-
+	
+	def mensaje_final
+		if @total>=20
+			return @mensaje= "Ganaste"
+		else
+			return @mensaje="Game over"
+		end
+	end
 end
