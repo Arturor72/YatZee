@@ -37,26 +37,36 @@
 			<tr>
 				<td> 			
 					<div> <%= @resultado%>
+						<div id="dado1_img"></div>
+						<input type="hidden" id="dado1" value="<%= @resultado%>">
 						<input type="checkbox" name="d1_selected" >
 					</div>
 				</td>
 				<td> 			
 					<div> <%= @resultado2%>
+						<div id="dado2_img"></div>
+						<input type="hidden" id="dado2" value="<%= @resultado2%>">
 						<input type="checkbox" name="d2_selected">
 					</div>
 				</td>
 				<td> 			
 					<div> <%= @resultado3%>
+						<div id="dado3_img"></div>
+						<input type="hidden" id="dado3" value="<%= @resultado3%>">
 						<input type="checkbox" name="d3_selected">
 					</div>
 				</td>
 				<td> 			
 					<div> <%= @resultado4%>
+						<div id="dado4_img"></div>
+						<input type="hidden" id="dado4" value="<%= @resultado4%>">
 						<input type="checkbox" name="d4_selected">
 					</div>
 				</td>
 				<td> 			
 					<div> <%= @resultado5%>
+						<div id="dado5_img"></div>
+						<input type="hidden" id="dado5" value="<%= @resultado5%>">
 						<input type="checkbox" name="d5_selected">
 					</div>
 				</td>
@@ -91,7 +101,32 @@
 					<td colspan="2"><h2>Tabla de puntos</h2></td>
 				</tr>
 				<tr>
-					<td>Puntaje :</td>
+					<td><a href="/add1s">Numero 1s :</a></td>
+					<td><%= @add1%></td>
+				</tr>
+				<tr>
+					<td><a href="">Numero 2s :</a></td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td><a href="">Numero 3s :</a></td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td><a href="">Numero 4s :</a></td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td><a href="">Numero 5s :</a></td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td><a href="">Numero 6s :</a></td>
+					<td>0</td>
+				</tr>
+
+				<tr>
+					<td>Total :</td>
 					<td><%= @resultado_total%></td>
 				</tr>
 			</table>

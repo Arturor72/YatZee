@@ -43,5 +43,19 @@ Then(/^no visualizo "(.*?)"$/) do |arg1|
 	last_response.body.should =~ /#{arg1}/m
 end
 
+When(/^selecciono el link "(.*?)"$/) do |link|
+	click_link(link)
+end
 
+Then(/^visualizo resultado "(.*?)"$/) do |arg1|
+	  last_response.body.should =~ /#{arg1}/m
+end
+
+Then(/^visualizo total "(.*?)"$/) do |arg1|
+     last_response.body.should =~ /#{arg1}/m
+end
+
+Then(/^veo la imagen "(.*?)"$/) do |image_name|
+  last_response.should have_xpath("//img[@src=\"#{image_name}\"]")
+end
 

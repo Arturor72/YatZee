@@ -9,6 +9,11 @@ get '/' do
 	erb :yatzee
 end
 
+get '/add1s' do
+	@add1="tu puntaje aqui es 3"
+	@@lanzamientos=3
+	erb :yatzee
+end
 
 ####
 post '/lanzarDado' do
