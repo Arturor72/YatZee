@@ -5,7 +5,7 @@ class Yatzee
 	def initialize
 		@dados=[Dado.new,Dado.new,Dado.new,Dado.new,Dado.new]
 		@total=0
-		@mensaje="Aun no tienes puntos"
+		@mensaje="Sigue intentando!"
 		@lanzamientos=0
 	end
 
