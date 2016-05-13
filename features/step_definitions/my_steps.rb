@@ -39,3 +39,9 @@ Then(/^visualizo "(.*?)"$/) do |arg1|
    last_response.body.should =~ /#{arg1}/m
 end
 
+Then(/^no visualizo "(.*?)"$/) do |arg1|
+	last_response.body.should =~ /#{arg1}/m
+end
+
+
+

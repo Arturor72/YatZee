@@ -8,6 +8,8 @@ get '/' do
 	erb :yatzee
 end
 
+
+####
 post '/lanzarDado' do
 	@@juego.lanzar_dados
 	@resultado=@@juego.get_dado(0).valor
@@ -21,7 +23,7 @@ post '/lanzarDado' do
 	
 	erb :yatzee
 end
-
+###
 post '/relanzarDado' do
 
 	# se obtiene el valor de los checkbox	
@@ -58,5 +60,14 @@ post '/relanzarDado' do
 	@resultado_total=@@juego.total
 	@mensaje=@@juego.mensaje_final
 	erb :yatzee
-end
+	
 
+end
+####
+
+post '/nvoJuego' do
+	@@juego=Yatzee.new
+	@resultado_total=@@juego.total
+	@mensaje=@@juego.mensaje_final
+	erb :yatzee
+end
