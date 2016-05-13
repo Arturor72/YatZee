@@ -23,7 +23,7 @@ Scenario: Relanzar dado
 Scenario: Veo mi puntaje
 	Given Voy a jugar
 	When hago click en el boton "lanzar"
-	Then visualizo en la tabla la fila "Total"
+	Then visualizo en la tabla la fila "Puntaje"
 	
 Scenario: Veo Resultado
 	Given Voy a jugar
@@ -66,7 +66,7 @@ Scenario: Seleccionar una casilla de resultados
 	Given Voy a jugar
 	When hago click en el boton "lanzar"
 #	And dados poseen valor 1, 1, 3, 4, 1
-	And selecciono el link "Numero 1s"
+#	And selecciono el link "Numero 1s"
 #	Then visualizo "tu puntaje aqui es 3"
 #	And visualizo total "3"
 
