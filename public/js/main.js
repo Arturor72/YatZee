@@ -15,7 +15,7 @@ $(document).ready(function(){
 	} else {
 		$("#btn_lanzar").hide();
 	}
-	if (cont!=0&&cont!=3){
+	if (cont!=0){
 		load_images();
 	}
 
