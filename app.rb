@@ -5,6 +5,7 @@ require_relative "./lib/Yatzee.rb"
 get '/' do
 	@@juego=Yatzee.new
 	@resultado_total=@@juego.total
+	@@lanzamientos=0
 	erb :yatzee
 end
 
@@ -20,7 +21,7 @@ post '/lanzarDado' do
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
 	@mensaje=@@juego.mensaje_final
-	
+	@@lanzamientos=@@lanzamientos+1
 	erb :yatzee
 end
 ###
@@ -59,6 +60,7 @@ post '/relanzarDado' do
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
 	@mensaje=@@juego.mensaje_final
+	@@lanzamientos=@@lanzamientos+1
 	erb :yatzee
 	
 
@@ -69,5 +71,6 @@ post '/nvoJuego' do
 	@@juego=Yatzee.new
 	@resultado_total=@@juego.total
 	@mensaje=@@juego.mensaje_final
+	@@lanzamientos=0
 	erb :yatzee
 end
