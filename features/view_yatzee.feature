@@ -56,4 +56,9 @@ Scenario: Perder Juego
 	Then visualizo "Game over"
 
 	
-
+Scenario: Ocultar boton lanzar, luego  de lanzar la primera vez los dados
+	Given Voy a jugar
+	And visualizo "lanzar"
+	When hago click en el boton "lanzar"
+	Then visualizo "relanzar"
+	
