@@ -16,6 +16,8 @@ post '/lanzarDado' do
 	@resultado5=@@juego.get_dado(4).lanzar 
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
+	@mensaje=@@juego.mensaje_final
+	
 	erb :yatzee
 end
 

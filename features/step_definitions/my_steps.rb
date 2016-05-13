@@ -31,4 +31,11 @@ Then(/^visualizo numero (\d+)$/) do |arg1|
  last_response.body.should =~ /#{arg1}/m
 end
 
+Then(/^visualizo en la tabla la fila "(.*?)"$/) do |arg1|
+ last_response.body.should =~ /#{arg1}/m
+end
+
+Then(/^visualizo "(.*?)"$/) do |arg1|
+   last_response.body.should =~ /#{arg1}/m
+end
 
