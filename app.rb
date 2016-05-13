@@ -56,6 +56,7 @@ post '/relanzarDado' do
 	# calcular resultado
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
+	@mensaje=@@juego.mensaje_final
 	erb :yatzee
 end
 

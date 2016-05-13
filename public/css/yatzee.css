@@ -22,3 +22,9 @@ table {
 table, th, td {
     border: 1px solid black;
 }
+
+#tablaPuntaje{
+position:relative
+left:150px;
+}
+
