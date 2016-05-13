@@ -17,7 +17,7 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<form method="POST" action="/lanzarDado">
-				<input type="submit" value="lanzar" class="btn-primary">
+				<input type="submit" value="lanzar" class="btn-primary" id="btn_lanzar">
 			</form>
 		</div>
 		<div class="col-lg-4"></div>
@@ -63,8 +63,8 @@
 
 			</tr>
 			<tr>
-				<td colspan="5">
-					<input type="submit" value="relanzar" id="relanzar" class="btn-warning">			
+				<td id="btn_relanzar" colspan="5">
+					<input type="submit" value="relanzar" id="relanzar" class="btn-warning">
 				</td>
 			</tr>
 			<tr>
@@ -91,7 +91,7 @@
 					<td colspan="2"><h2>Tabla de puntos</h2></td>
 				</tr>
 				<tr>
-					<td>Puntaje :</td>				
+					<td>Puntaje :</td>
 					<td><%= @resultado_total%></td>
 				</tr>
 			</table>
@@ -103,6 +103,7 @@
 	<div class="row">		
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4 col-centered">
+					<input type="hidden" id="result" value="<%= @mensaje%>"/>
 					<h1>Resultado : <%= @mensaje%><h1>
 		<div>
 			<form method="POST" action="/nvoJuego">
