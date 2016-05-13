@@ -21,7 +21,7 @@ post '/lanzarDado' do
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
 	@mensaje=@@juego.mensaje_final
-	@@lanzamientos=@@lanzamientos+1
+	@@lanzamientos=@@juego.lanzamientos
 	erb :yatzee
 end
 ###
@@ -34,33 +34,35 @@ post '/relanzarDado' do
 	dado4_selected = params[:d4_selected]
 	dado5_selected = params[:d5_selected]
 	# Se crea un arreglo con los dados seleccionados
+####################QUITAR PARAM 1 del relanzar#####
 	if dado1_selected
-		@@juego.get_dado(0).lanzar
+		@@juego.get_dado(0).lanzar 1
 	end
 	if dado2_selected
-		@@juego.get_dado(1).lanzar
+		@@juego.get_dado(1).lanzar 1
 	end
 	if dado3_selected
-		@@juego.get_dado(2).lanzar
+		@@juego.get_dado(2).lanzar 1
 	end
 	if dado4_selected
-		@@juego.get_dado(3).lanzar
+		@@juego.get_dado(3).lanzar 1
 	end
 	if dado5_selected
-		@@juego.get_dado(4).lanzar
+		@@juego.get_dado(4).lanzar 1
 	end
 	# se setean los nuevos valores en la pantalla
-	@resultado=@@juego.get_dado(0).valor
-	@resultado2=@@juego.get_dado(1).valor
-	@resultado3=@@juego.get_dado(2).valor
-	@resultado4=@@juego.get_dado(3).valor
-	@resultado5=@@juego.get_dado(4).valor
+	@resultado=@@juego.get_dado(0).valor 
+	@resultado2=@@juego.get_dado(1).valor 
+	@resultado3=@@juego.get_dado(2).valor 
+	@resultado4=@@juego.get_dado(3).valor 
+	@resultado5=@@juego.get_dado(4).valor 
 	
 	# calcular resultado
 	@@juego.sumar_resultados_dados
 	@resultado_total=@@juego.total
+	@@juego.incrementar_lanzamientos
+	@@lanzamientos=@@juego.lanzamientos
 	@mensaje=@@juego.mensaje_final
-	@@lanzamientos=@@lanzamientos+1
 	erb :yatzee
 	
 

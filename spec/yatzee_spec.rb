@@ -26,5 +26,25 @@ describe "Juego de Yatzee" do
 		juego.total.should == 24		
 	end
 
+	
+	it "Tercer lanzamiento obtuvo [1,1,1,1,1] y obtener lanzamientos=3" do
+		juego = Yatzee.new
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.lanzamientos.should == 3
+	end
+
+	it "Tercer lanzamiento obtuvo [1,1,1,1,1] y la suma debe ser 5" do
+		juego = Yatzee.new
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.lanzar_dados(juego.get_dados,[1,1,1,1,1])
+		juego.sumar_resultados_dados
+		juego.total.should == 5	
+		juego.mensaje_final.should == "Game over" 
+		
+	end
+
 
 end

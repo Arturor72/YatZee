@@ -43,5 +43,11 @@ Then(/^no visualizo "(.*?)"$/) do |arg1|
 	last_response.body.should =~ /#{arg1}/m
 end
 
+When(/^Puntaje menor a (\d+)$/) do |arg1|
+  last_response.body.should =~ /#{arg1}/m
+end
+
+
+
 
 
