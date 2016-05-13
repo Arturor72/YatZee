@@ -1,19 +1,34 @@
 <html>
 	<head>
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="css/yatzee.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<h1 id="titulo">YatZee</h1>
-		
-	<div id="lanzar">
-			<form method="POST" action="/lanzarDado">
-			<input type="submit" value="lanzar">
-			</form>
-			
+	<div class="row">		
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4 col-centered">
+				<h1 id="titulo">YatZee</h1>		
 		</div>
-		<div id="dados">
+		<div class="col-lg-4"></div>
+
+	</div>
+	<div class="row">		
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<form method="POST" action="/lanzarDado">
+				<input type="submit" value="lanzar" class="btn-primary">
+			</form>
+		</div>
+		<div class="col-lg-4"></div>
+	</div>
+
+	<div class="row">		
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
 		<form method="POST" action="/relanzarDado">		
-		<table id="tablaDados">
+		
+		<table id="tablaDados" class="table">
 			<tr  align="center"> 
 				<td colspan="5">
 					Dados
@@ -49,15 +64,20 @@
 			</tr>
 			<tr>
 				<td colspan="5">
-					<input type="submit" value="relanzar">			
+					<input type="submit" value="relanzar" id="relanzar" class="btn-warning">			
 				</td>
 			</tr>
 		
 		</table>
 		</form>
-
+		</div>
+		<div class="col-lg-4"></div>
+	</div>
 		<div>
-			<table>
+		<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<table class="table">
 				<tr>
 					<td colspan="2"><h2>Tabla de puntos</h2></td>
 				</tr>
@@ -66,11 +86,23 @@
 					<td><%= @resultado_total%></td>
 				</tr>
 			</table>
+
 		</div>
-		<div id="total">
-			<p>Resultado : <%= @mensaje%><p>
-		</div>	
+		<div class="col-lg-4"></div>
+		</div>
+		</div>
+	<div class="row">		
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4 col-centered">
+					<h1>Resultado : <%= @mensaje%><h1>
+		</div>
+		<div class="col-lg-4"></div>
 
+	</div>		
 
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	<body>
+
 </html>
