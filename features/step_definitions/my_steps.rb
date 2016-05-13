@@ -23,3 +23,12 @@ Then(/^visualizo el total de puntos "(.*?)"$/) do |total|
 	  last_response.body.should =~ /#{total}/m
 end
 
+When(/^selecciono "(.*?)"$/) do |arg1|
+  check(arg1)
+end
+
+Then(/^visualizo numero (\d+)$/) do |arg1|
+ last_response.body.should =~ /#{arg1}/m
+end
+
+

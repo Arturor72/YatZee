@@ -12,4 +12,12 @@ Scenario: Lanzar dado
 #	And visualizo numero "5"
 #	And visualizo el total de puntos "8"
 
+Scenario: Relanzar dado
+	Given Voy a jugar
+	When hago click en el boton "lanzar"
+	And selecciono "dado3"
+	And hago click en el boton "relanzar"
+	Then visualizo numero 1
+	
+
 
