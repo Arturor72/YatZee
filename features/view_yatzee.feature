@@ -35,6 +35,26 @@ Scenario: Reiniciar Juego
 	And hago click en el boton "lanzar"
 	When hago click en el boton "Volver a Jugar"
 	Then  visualizo "Aun no tienes puntos"
+
+Scenario: Perder Juego
+	Given Voy a jugar
+	When hago click en el boton "lanzar"
+	And selecciono "d1_selected"
+	And selecciono "d2_selected"
+	And selecciono "d3_selected"
+	And selecciono "d4_selected" 
+	And selecciono "d5_selected"
+	And hago click en el boton "relanzar"
+	And selecciono "d1_selected"
+	And selecciono "d2_selected"
+	And selecciono "d3_selected"
+	And selecciono "d4_selected" 
+	And selecciono "d5_selected"
+	And hago click en el boton "relanzar"
+	And visualizo "Lanzamientos:3"
+	# And visualizo "Puntaje :</td><td>5</td>"
+	#Then visualizo "Game over"
+
 	
 Scenario: Ocultar boton lanzar, luego  de lanzar la primera vez los dados
 	Given Voy a jugar
