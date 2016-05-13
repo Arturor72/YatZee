@@ -34,21 +34,21 @@ post '/relanzarDado' do
 	dado4_selected = params[:d4_selected]
 	dado5_selected = params[:d5_selected]
 	# Se crea un arreglo con los dados seleccionados
-####################QUITAR PARAM 1 del relanzar#####
+
 	if dado1_selected
-		@@juego.get_dado(0).lanzar 1
+		@@juego.get_dado(0).lanzar
 	end
 	if dado2_selected
-		@@juego.get_dado(1).lanzar 1
+		@@juego.get_dado(1).lanzar 
 	end
 	if dado3_selected
-		@@juego.get_dado(2).lanzar 1
+		@@juego.get_dado(2).lanzar 
 	end
 	if dado4_selected
-		@@juego.get_dado(3).lanzar 1
+		@@juego.get_dado(3).lanzar 
 	end
 	if dado5_selected
-		@@juego.get_dado(4).lanzar 1
+		@@juego.get_dado(4).lanzar 
 	end
 	# se setean los nuevos valores en la pantalla
 	@resultado=@@juego.get_dado(0).valor 
