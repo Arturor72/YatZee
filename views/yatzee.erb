@@ -7,8 +7,8 @@
 	<body>
 	<div class="row">		
 		<div class="col-lg-4"></div>
-		<div class="col-lg-4 col-centered">
-				<h1 id="titulo">YatZee</h1>		
+		<div class="col-lg-4 text-center">
+				<h1 id="titulo" style="color: #757169">YatZee</h1>		
 		</div>
 		<div class="col-lg-4"></div>
 
@@ -29,9 +29,9 @@
 	</div>
 	<div class="row">		
 		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
+		<div class="col-lg-4 text-center">
 			<form method="POST" action="/lanzarDado">
-				<input type="submit" value="lanzar" class="btn-primary" id="btn_lanzar">
+				<input type="submit" value="lanzar" class="btn btn-primary btn-lg" id="btn_lanzar">
 			</form>
 		</div>
 		<div class="col-lg-4"></div>
@@ -39,16 +39,15 @@
 
 	<div class="row">		
 		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
+		<div class="col-lg-4 text-center">
 		<form method="POST" action="/relanzarDado">		
 		
-		<table id="tablaDados" class="table">
+		<table id="tablaDados" class="table" >
 			<tr  align="center"> 
-				<td colspan="5">
 					Dados
 				</td>
 			 </tr>
-			<tr>
+			<tr align="center">
 				<td> 			
 					<div> <%= @resultado%>
 						<div id="dado1_img"></div>
@@ -86,9 +85,9 @@
 				</td>
 
 			</tr>
-			<tr>
+			<tr align="center" >
 				<td id="btn_relanzar" colspan="5">
-					<input type="submit" value="relanzar" id="relanzar" class="btn-warning">
+					<input type="submit" value="relanzar" id="relanzar" class="btn btn-warning btn-lg">
 				</td>
 			</tr>
 			<tr>
@@ -126,12 +125,12 @@
 		</div>
 	<div class="row">		
 		<div class="col-lg-4"></div>
-		<div class="col-lg-4 col-centered">
+		<div class="col-lg-4 text-center">
 					<input type="hidden" id="result" value="<%= @mensaje%>"/>
 					<h3>Resultado : <%= @mensaje%><h3>
 		<div>
 			<form method="POST" action="/nvoJuego">
-			<input type="submit" value="Volver a Jugar" class="btn-success"/>
+			<input type="submit" value="Volver a Jugar" class="btn btn-success btn-lg"/>
 			</form>
 		</div>
 		</div>
