@@ -5,6 +5,7 @@ class Yatzee
 	def initialize
 		@dados=[Dado.new,Dado.new,Dado.new,Dado.new,Dado.new]
 		@total=0
+		@mensaje="Aun no tienes puntos"
 	end
 
 	def total 
@@ -35,6 +36,8 @@ class Yatzee
 	def mensaje_final
 		if @total>=20
 			return @mensaje= "Ganaste"
+		elsif @total=0
+			return @mensaje
 		else
 			return @mensaje="Game over"
 		end

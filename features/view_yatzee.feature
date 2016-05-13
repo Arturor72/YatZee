@@ -30,3 +30,10 @@ Scenario: Veo Resultado
 	When hago click en el boton "lanzar"
 	Then visualizo "Resultado"
 
+Scenario: Reiniciar Juego
+	Given Voy a jugar
+	And hago click en el boton "lanzar"
+	When hago click en el boton "Volver a Jugar"
+	Then  visualizo "Aun no tienes puntos"
+	
+
