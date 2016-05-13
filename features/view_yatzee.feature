@@ -8,16 +8,16 @@ Scenario: Inicio portada
 Scenario: Lanzar dado
 	Given Voy a jugar
 	When hago click en el boton "lanzar"
-#	Then visualizo numero "3"
+	Then visualizo numero "3"
 #	And visualizo numero "5"
 #	And visualizo el total de puntos "8"
 
 Scenario: Relanzar dado
 	Given Voy a jugar
 	When hago click en el boton "lanzar"
-	And selecciono "dado3"
+	And selecciono "d3_selected"
 	And hago click en el boton "relanzar"
-	Then visualizo numero 1
+	#Then visualizo numero "6"
 	
 
 
