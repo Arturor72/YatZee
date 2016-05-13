@@ -10,16 +10,20 @@
 		<div class="col-lg-4 col-centered">
 				<h1 id="titulo">YatZee</h1>		
 		</div>
-		<div>
-			<h2 id="reglas">
+		<div class="col-lg-4"></div>
+
+	</div>
+	<div class="row">		
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4 col-centered">
+			<p id="reglas">
 			¡Bienvenido a YatZee!<br>
 			Lanza los dados para obtener una suma mayor de 20.<br> 
 			Tienes 2 oportunidades más de relanzar uno o más dados para
 			lograr la victoria.<br>
 			Seleccionalos inteligentemente.<br>
-			</h2>	
+			</p>	
 		</div>
-
 		<div class="col-lg-4"></div>
 
 	</div>
@@ -124,10 +128,10 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4 col-centered">
 					<input type="hidden" id="result" value="<%= @mensaje%>"/>
-					<h1>Resultado : <%= @mensaje%><h1>
+					<h3>Resultado : <%= @mensaje%><h3>
 		<div>
 			<form method="POST" action="/nvoJuego">
-			<input type="submit" value="Volver a Jugar">
+			<input type="submit" value="Volver a Jugar" class="btn-success"/>
 			</form>
 		</div>
 		</div>
